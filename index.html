@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PROVERS LTD — OpalTundra Games</title>
+<meta name="description" content="OpalTundra Games">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PROVERS LTD">
+<meta property="og:title" content="PROVERS LTD — OpalTundra Games">
+<meta property="og:description" content="OpalTundra Games">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts/spacegrotesk.css">
+<style>
+:root {
+  --bg: hsl(145 22% 7%);
+  --card: hsl(145 18% 11%);
+  --card2: hsl(145 16% 15%);
+  --ink: hsl(145 12% 95%);
+  --muted: hsl(145 10% 63%);
+  --line: hsl(145 16% 19%);
+  --accent: hsl(325 70% 70%);
+  --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--sans); }
+.wrap { max-width: 70rem; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2rem); }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.4rem; padding-bottom: 1.4rem; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 700; font-size: 1.1rem; letter-spacing: -.01em; }
+.mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: var(--bg); font-weight: 700; }
+.mail { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .9rem; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--muted); font-size: .9rem; }
+.mail svg { width: 16px; height: 16px; }
+.mail:hover { border-color: var(--accent); color: var(--accent); }
+.hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem); }
+.hero h1 { margin: 0; max-width: 17ch; font-size: clamp(2.4rem, 7.5vw, 4.7rem); line-height: 1; letter-spacing: -.035em; font-weight: 700; text-wrap: balance; }
+.hero h1 b { color: var(--accent); font-weight: 700; }
+.hero p { margin: 1.4rem 0 0; max-width: 50ch; color: var(--muted); font-size: 1.1rem; }
+.head { display: flex; align-items: baseline; gap: .8rem; margin: 0 0 1.2rem; }
+.head h2 { margin: 0; font-size: 1.5rem; letter-spacing: -.02em; }
+.head span { color: var(--muted); font-size: .95rem; }
+.cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
+.cover { aspect-ratio: 16 / 10; background: linear-gradient(135deg, var(--accent), var(--card2)); overflow: hidden; }
+.cover img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; opacity: .92; }
+.card .body { padding: 0 1.2rem 1.3rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+.card .icon { width: 68px; height: 68px; border-radius: 16px; margin-top: -34px; border: 4px solid var(--card); background: var(--card2); position: relative; }
+.card h3 { margin: .2rem 0 0; font-size: 1.25rem; letter-spacing: -.015em; }
+.card .short { margin: 0; color: var(--muted); font-size: .95rem; flex: 1; }
+.actions { display: flex; gap: .5rem; flex-wrap: wrap; margin: .6rem 0 0; }
+.btn { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem .9rem; border-radius: 10px; font-size: .85rem; font-weight: 600; line-height: 1; text-decoration: none; border: 1px solid transparent; transition: background-color .12s, border-color .12s, color .12s; }
+.btn svg { width: 14px; height: 14px; }
+.btn-play { background: var(--accent); color: var(--bg); }
+.btn-play:hover { filter: brightness(1.1); }
+.btn-ghost { border-color: var(--line); color: var(--muted); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.none { color: var(--muted); }
+footer { margin-top: clamp(3rem, 8vw, 5rem); border-top: 1px solid var(--line); padding: 2.2rem 0 3rem; display: grid; gap: 2rem; color: var(--muted); font-size: .9rem; }
+footer h4 { margin: 0 0 .7rem; color: var(--ink); font-size: .95rem; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--accent); }
+footer .lines a { display: inline-flex; align-items: center; gap: .55rem; }
+footer .lines svg { width: 16px; height: 16px; }
+@media (min-width: 720px) { footer { grid-template-columns: 1.2fr 1fr 1fr; } }
+@media (max-width: 520px) { .mail span { display: none; } }
+
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="/"><span class="mark">P</span>PROVERS LTD</a>
+  <a class="mail" href="mailto:proversltdd@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 8.2 5.6a1.4 1.4 0 0 0 1.6 0L21 7"/></svg><span>proversltdd@gmail.com</span></a>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <h1>OpalTundra Games</h1>
+    <p>We create calm puzzle experiences with snowy settings and gentle visual design. Players can solve challenges at their own pace and explore new mechanics.</p>
+  </section>
+  <section>
+    <div class="head"><h2>Games</h2><span>2 titles</span></div>
+    <div class="cards">
+      <article class="card">
+        <div class="cover"><img src="/shots/plain-jotter_1.png" alt="Plain Jotter screenshot 1" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <img class="icon" src="/icons/plain-jotter.png" alt="" width="68" height="68" loading="lazy">
+          <h3>Plain Jotter</h3>
+          <p class="short">A dated notebook for ideas, thoughts and things worth keeping.</p>
+          <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=page.plainjotter.pad"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/plain-jotter/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><img src="/shots/wander-notebook_1.png" alt="Wander Notebook screenshot 1" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <img class="icon" src="/icons/wander-notebook.png" alt="" width="68" height="68" loading="lazy">
+          <h3>Wander Notebook</h3>
+          <p class="short">A travel diary with daily entries, prompts, a calendar, and plain insights.</p>
+          <p class="actions"><a class="btn btn-play" href="https://play.google.com/store/apps/details?id=ink.wandernotebook.entries"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.14-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14Z"/></svg>Google Play</a><a class="btn btn-ghost" href="/wander-notebook/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 8.3-7 9.5-4.1-1.2-7-5.2-7-9.5V6l7-3Z"/><path d="M9.5 12.2l1.9 1.9 3.5-3.7"/></svg>Privacy policy</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer class="wrap">
+  <div>
+    <h4>PROVERS LTD</h4>
+    <p style="margin:0">Clear rules, short sessions and a design that stays out of the way. Questions and feedback are welcome by email.</p>
+  </div>
+  <div class="lines">
+    <h4>Contact</h4>
+    <ul>
+          <li><a href="mailto:proversltdd@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 8.2 5.6a1.4 1.4 0 0 0 1.6 0L21 7"/></svg><span>proversltdd@gmail.com</span></a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Policies</h4>
+    <ul>
+        <li><a href="/plain-jotter/">Plain Jotter — privacy policy</a></li>
+        <li><a href="/wander-notebook/">Wander Notebook — privacy policy</a></li>
+    </ul>
+    <p style="margin:1.2rem 0 0">&copy; 2026 PROVERS LTD</p>
+  </div>
+</footer>
+</body>
+</html>
